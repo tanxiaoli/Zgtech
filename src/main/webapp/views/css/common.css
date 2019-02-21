@@ -1,0 +1,44 @@
+*{margin: 0px;padding: 0px;}
+li{list-style-type: none;}
+
+/***********这里是头部*****************/
+#header{width:100%;}
+#header>#menu{width:1200px;
+			  height:100px;
+			  margin: 0 auto;}
+#header>#menu>#logo{float: left;
+					margin-top: 3px;
+					margin-right: 34%;}
+#header>#menu>ul{padding-top: 45px;}
+#header>#menu>ul>li{float: left;}
+#header>#menu>ul>li>a{font-size: 14px;
+					  font-family: "微软雅黑";
+					  text-decoration: none;
+					  color: #030303;
+					  }
+#header>#menu>ul>li>a:hover{color:#6df8fb;}
+#header>#menu>ul>.title{margin-right:6%;}
+
+/***********这里是底部*****************/
+#footer{margin-top:212px;clear:both;width: 100%;background:black;}
+#footer>#footer-data{width:1040px;
+											margin: 0 auto;}
+#footer>#footer-data>ul>li{float: left;
+							font-size: 18px;
+							color: white;
+							font-family: "微软雅黑";
+							font-weight: bold;
+							margin: 35px 65px;}
+#footer>#footer-data>ul>li>p{text-align: center;}
+#footer>#footer-data>ul>li>p>a{font-size: 11px;
+														font-family: "宋体";
+														color: white;
+														text-decoration: none;
+														}
+#footer>#copyright{text-align: center;
+									clear: both;
+									color: white;
+									padding: 55px 0px 18px;
+									font-size: 14px;
+									font-family: "微软雅黑";}
+									

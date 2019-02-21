@@ -1,0 +1,79 @@
+<#assign ctx=request.contextPath/>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/news_details.css" />
+	</head>
+	<body>
+<!--------------这里是头部--------------------------------------------------->
+	<#include "common/top.html"/>
+		
+<!----------------这里是中部------------------------------------------------------->		
+		
+		<div id="middle">	
+<!----------------这里是banner区-------------->
+		    <div id="banner">
+				<img src="img/images/images/news-banner_02.jpg" alt="这是banner图" id="banner-jpg">
+				
+			</div>
+<!----------------这里是中部左侧导航栏-------------->
+			<div id="middle-down">
+				<div id="middle-left">
+					<div id="left-up">
+						<span>NEWS CENTER</span>
+						<P>新闻中心</P>
+					</div>
+					<ul>
+						<li id="menu-1">
+							<a href="#">企业新闻</a>
+						</li>
+						<li id="menu-2">
+							<a href="#">行业新闻</a>
+						</li>
+						<li>
+							<a href="#">周边新闻</a>
+						</li>
+					</ul>
+				</div>
+			
+			
+<!----------------这里是中部右侧简介详情-------------->
+				<div id="middle-right">
+					<div id="right-up">
+						<p>
+							<a href="index.html">首页&gt;</a>
+							<a href="news.html">新闻中心&gt;</a>
+							<span>
+								<a href="#">新闻详情</a>
+							</span>
+						</p>
+						<span></span>
+					</div>
+					<div id="right-down">
+					
+					</div>
+					<div id="check">
+						<span> <a href="#" class="pre">上一篇：红星美凯龙登福布斯最受尊重企业榜 独占中国家居鳌头</a></span>
+						<span><a href="#" class="next">下一篇：成功发行类REITs，弘辉家具公司 联合高和资本升级轻资产战略</a></span>
+					</div>
+					<div id="author">
+						<p>作者：小叶</p>
+						<p>2017年12月5日</p>
+					</div>
+					<div id="bottom-area">
+						<a href="#">返回新闻列表</a>
+					</div>
+					
+				</div>			
+
+			</div>
+		</div>
+<!------- footer 这里是底部-------------------------------------------------->	
+		<#include "common/footer.html"/>
+		
+		
+	</body>
+</html>

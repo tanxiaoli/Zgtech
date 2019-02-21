@@ -1,0 +1,57 @@
+
+<!--------------这里是头部--------------------------------------------------->
+		<div id="header">
+				<div class="left">
+					<span class="home"><a href="${ctx}/customer/home">回到首页</a></span>
+					<#if session_user??>
+					
+					
+					<span>亲，欢迎<font color=red>${session_user.name}</font>来到赵刚技术工作室</span>
+					
+					
+					<span>请<a href="${ctx}/customer/loginOut">安全退出</a></span>
+							
+					
+					<#else>
+					<span>请<a href="${ctx}/customer/login">登录</a></span>
+					<a href="${ctx}/customer/toRegister">免费注册</a>
+					</#if>
+					
+				</div>
+			<div id="menu">
+				<img src="${ctx}/views/img/images/index-logo_03.jpg" alt="这是本公司logo"   id="logo">
+				<ul>
+					<li class="title">
+						<a href="${ctx}/admin/login"
+							style="color: #13f6f9">
+							首&nbsp;&nbsp;&nbsp;&nbsp;页
+						</a>
+					</li>
+					<li class="title">
+						<a href="${ctx}/admin/login">
+						技术室介绍
+						</a>
+					</li>
+					<li class="title">
+						<a href="${ctx}/admin/login">
+						产品中心
+						</a>
+					<li>
+					<li class="title">
+						<a href="${ctx}/admin/login">
+						新闻中心
+						</a>
+					</li>
+					
+						<a href="${ctx}/admin/login">
+						联系我们
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		
+<!----------------这里是中部------------------------------------------------------->		
+		
+	

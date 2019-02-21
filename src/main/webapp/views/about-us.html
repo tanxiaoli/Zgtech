@@ -1,0 +1,68 @@
+<#assign ctx=request.contextPath/>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/about-us.css" />
+	</head>
+	<body>
+<!--------------这里是头部--------------------------------------------------->
+		<#include "common/top.html"/>
+		
+<!----------------这里是中部------------------------------------------------------->		
+		
+		<div id="middle">	
+<!----------------这里是banner区-------------->
+		    <div id="banner">
+				<img src="img/images/images/about_us_02.jpg" alt="这是banner图" id="banner-jpg">
+				
+			</div>
+<!----------------这里是中部左侧导航栏-------------->
+			<div id="middle-down">
+				<div id="middle-left">
+					<div id="left-up">
+						<span>ABOUT US</span>
+						<P>公司介绍</P>
+					</div>
+					<ul>
+						<li id="menu-1">
+							<a href="#">公司简介</a>
+						</li>
+						<li id="menu-2">
+							<a href="#">企业文化</a>
+						</li>
+						<li>
+							<a href="#">行业品牌</a>
+						</li>
+					</ul>
+				</div>
+			
+			
+<!----------------这里是中部右侧简介详情-------------->
+				<div id="middle-right">
+					<div id="right-up">
+						<p>
+							<a href="index.html">首页&gt;</a>
+							<span>
+								<a href="#">公司介绍</a>
+							</span>
+						</p>
+						<span></span>
+					</div>
+					<div id="right-down">
+						<img src="img/images/images/about_us-1_05.jpg"/>
+						
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+<!------- footer 这里是底部-------------------------------------------------->	
+			<#include "common/footer.html"/>
+		
+		
+	</body>
+</html>

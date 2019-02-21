@@ -1,0 +1,55 @@
+
+#banner{width:1920px;height400px;margin: 0 auto;}
+
+#middle #middle-down{width: 1200px;margin: 100px auto;}
+
+#middle-left{width: 196px;height: 252px;text-align: center;float: left;margin-right:14px;}
+#left-up{width: 196px;height: 76px;background: #13f6f9;padding-top: 13px;}
+#left-up>span{font-size: 24px;font-family:arial;color: white;}
+#left-up>p{font-size: 36px;font-family: "微软雅黑";color:white;line-height: 40px;}
+#middle-left>ul>li{border: solid 1px gray;}
+#middle-left>ul>#menu-2{border-bottom: 0px;border-top: 0px;}
+#middle-left>ul>#menu-1>a{color:#13f6f9;}
+#middle-left>ul>li>a{text-decoration: none;
+					 line-height: 54px;
+					 font-size: 24px;
+					 font-family: "微软雅黑";
+					 color: #7f7f7f;}
+#middle-right{width: 990px;float: right;}
+#middle-right>#right-up{position: relative;bottom: 17px;}
+#middle-right>#right-up>p{float: right;}
+#middle-right>#right-up>p a{text-decoration: none;color: gray;}
+#middle-right>#right-up>span{width: 990px;
+							height: 1px;
+							background: gray;
+							display: block;
+							clear: both;
+							}
+#middle-right>#right-up>p>span>a{color:#13f6f9;}
+
+
+#middle-right>#product-pic{width: 1200px;margin: 0 auto;}
+#middle-right>#product-pic>ul{clear: both;display:block;padding-top:45px;}
+#middle-right>#product-pic>ul>li{float: left;width: 29%;text-align: center;}
+#middle-right>#product-pic>ul>li>img{width: 100%;}
+#middle-right>#product-pic>ul>li>a{display:inline-block;text-decoration:none;color:gray;margin: 20px 0px;}
+#middle-right>#product-pic>ul>li>.details{color:#79f9fb}
+#middle-right>#product-pic>ul>.mid{margin: 0 74px;}
+#product-pic>#pic-down{padding-top: 140px;padding-bottom: 63px;}
+
+
+
+
+#page{clear:both;text-align: center;padding: 80px 0px;}
+#page>span{display:inline-block;
+		   width: 46px;height:38px;
+		   border: solid 1px #13f6f9;
+		   line-height: 38px;
+		   text-align: center;
+		   background: #79f9fb ;}
+
+		   
+#page>.page-1{width: 65px;height: 38px;}
+#page>#page-2{background:white;}
+#page>#page-2>a{color:#79f9fb }
+#page>span>a{text-decoration: none;color: white;}

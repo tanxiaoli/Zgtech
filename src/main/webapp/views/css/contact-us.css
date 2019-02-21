@@ -1,0 +1,35 @@
+
+
+#banner{width:1920px;height:400px;margin: 0 auto;}
+#middle-down{width: 1320px;margin: 100px auto;}
+#middle-down>#middle-left{width:200px;height:68px;background:#13f6f9;text-align: center;padding: 30px;float: left;}
+#middle-left>span{font-size: 24px;font-family:arial;color: white;}
+#middle-left>p{font-size: 36px;font-family: "微软雅黑";color:white;line-height: 40px;}
+
+
+#middle-right{width:1056px;float: right;}
+#middle-right>#right-up{position: relative;bottom: 17px;}
+#middle-right>#right-up>p{float: right;}
+#middle-right>#right-up>p a{color:gray;text-decoration: none;}
+#middle-right>#right-up>span{width:1056px;
+							height: 1px;
+							background: gray;
+							display: block;
+							clear: both;
+							}
+#middle-right>#right-up>p>span>a{color:#13f6f9;}
+#map{width: 1057px;height:406px;}
+
+#contact-data{width: 1066px;height: 370px;}
+#contact-data>h1{font-size: 24px;font-family: "微软雅黑";color: #797979;}
+#contact-data>p{line-height: 42px;font-size: 24px;font-family: "微软雅黑";color: #797979;}
+#contact-data>ul>li{float: left;margin-top: 14px;margin-right: 22px;}
+#contact-data{padding-top:54px;}
+
+
+
+#input>input{width: 220px;height: 62px;margin-right: 36px;}
+textarea{width: 1058px;height: 300px;margin: 32px 0px;}
+#input>#input-ver{width: 420px;height: 80px;margin-right: 73px;}
+#input>img{position: relative;top:30px;}
+#submit{width:112px;height: 50px;background: #13f6f9;color:white;font-size: 24px;margin: 25px 0px 100px;}

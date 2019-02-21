@@ -1,0 +1,72 @@
+<#assign ctx=request.contextPath/>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/pro_details.css" />
+	</head>
+	<body>
+<!--------------这里是头部--------------------------------------------------->
+	<#include "common/top.html"/>
+		
+		
+<!----------------这里是中部------------------------------------------------------->		
+		
+		<div id="middle">	
+<!----------------这里是banner区-------------->
+		    <div id="banner">
+				<img src="img/images/images/pro_details-banner_02.jpg" alt="这是banner图" id="banner-jpg">
+				
+			</div>
+<!----------------这里是中部左侧导航栏-------------->
+			<div id="middle-down">
+				<div id="middle-left">
+					<div id="left-up"> 
+						<span>PRODUCTS</span>
+						<P>产品中心</P>
+					</div>
+					<ul>
+						<li id="menu-1">
+							<a href="#">舒适技术</a>
+						</li>
+						<li id="menu-2">
+							<a href="#">时尚技术</a>
+						</li>
+						<li>
+							<a href="#">实木技术</a>
+						</li>
+					</ul>
+				</div>
+			
+			
+<!----------------这里是中部右侧简介详情-------------->
+				<div id="middle-right">
+					<div id="right-up">
+						<p>
+							<a href="index.html">首页&gt;</a>
+							<a href="product.html">产品中心&gt;</a>
+							<span>
+								<a href="#">产品详情</a>
+							</span>
+						</p>
+						<span></span>
+					</div>
+					<div id="right-down">
+						
+					
+						<a href="#">返回产品中心</a>
+					</div>
+					
+				</div>			
+
+			</div>
+		</div>
+<!------- footer 这里是底部-------------------------------------------------->	
+	<#include "common/footer.html"/>
+
+		
+		
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<#assign ctx=request.contextPath/>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/contact-us.css" />
+		<script type="text/javascript" src="js/jQuery.js"></script>
+		<script type="text/javascript" src="js/contact-us.js"></script>
+	</head>
+	<body>
+<!--------------这里是头部--------------------------------------------------->
+	<#include "common/top.html"/>
+<!----------------这里是中部------------------------------------------------------->		
+		
+		<div id="middle">	
+<!----------------这里是banner区-------------->
+		    <div id="banner">
+				<img src="img/images/images/contact_us-banner_02.jpg" alt="这是banner图" id="banner-jpg">
+				
+			</div>
+<!----------------这里是中部左侧导航栏-------------->
+
+			<div id="middle-down">
+				<div id="middle-left">
+					<span>CONTACT US</span>
+					<P>联系我们</P>	
+				</div>
+				<div id="middle-right">
+					<div id="right-up">
+						<p>
+							<a href="index.html"">首页&gt;</a>
+							<span>
+								<a href="#">公司介绍</a>
+							</span>
+						</p>
+						<span></span>
+					</div>
+					<iframe src="map.html" id="map" scrolling="no"></iframe>
+					<div id="contact-data">
+						<h1>联系我们</h1>
+						<p>联系人：李先生</p>
+						<p>电&nbsp;&nbsp;&nbsp;话：0769-81633378</p>
+						<p>手&nbsp;&nbsp;&nbsp;机：15963568741</p>
+						<p>传&nbsp;&nbsp;&nbsp;真：0769-81633208</p>
+						<p>地&nbsp;&nbsp;&nbsp;址：东莞市厚街镇涌口管理区国泰路5号</p>	
+					</div>
+					<div id="input">
+						<input type="text" value="昵称" id="input-name"/>
+						<input type="text" value="联系方式" id="input-tel"/>
+						<textarea >您的宝贵意见</textarea>
+						<input type="text" value="验证码"/ id="input-ver">
+						<img src="img/images/images/contact_us-ver_03.jpg" />
+						<br>
+						<input type="submit" value="提交" id="submit"/>
+					</div>	
+				</div>
+			</div>
+		
+		</div>
+<!------- footer 这里是底部-------------------------------------------------->	
+		<#include "common/footer.html"/>
+		
+		
+	</body>
+</html>

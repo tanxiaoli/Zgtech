@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zgtech.dao.WeiXinUserMapper">
+	<resultMap id="BaseResultMap" type="com.zgtech.dto.WeiXinUser">
+		<id column="Id" property="id" jdbcType="INTEGER" />
+		<result column="NickName" property="nickName" jdbcType="VARCHAR" />
+		<result column="Gender" property="gender" jdbcType="VARCHAR" />
+		<result column="Language" property="language" jdbcType="VARCHAR" />
+		<result column="City" property="city" jdbcType="VARCHAR" />
+		<result column="Province" property="province" jdbcType="VARCHAR" />
+		<result column="Country" property="country" jdbcType="VARCHAR" />
+		<result column="AvatarUrl" property="avatarUrl" jdbcType="VARCHAR" />
+		<result column="OpenId" property="openId" jdbcType="VARCHAR" />
+		<result column="JionCount" property="jionCount" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<resultMap id="BaseResultFairZD" type="com.zgtech.dto.WeiXinFairZD">
+		<id column="Id" property="id" jdbcType="INTEGER" />
+		<result column="FairName" property="fairName" jdbcType="VARCHAR" />
+		<result column="FormIp" property="formIp" jdbcType="VARCHAR" />
+		<result column="PeopleCount" property="peopleCount" jdbcType="INTEGER" />
+		<result column="FavourableCount" property="favourableCount" jdbcType="INTEGER" />
+	</resultMap>
+	
+	
+	<resultMap id="BaseResultFairMX" type="com.zgtech.dto.WeiXinFairMX">
+		<id column="Id" property="id" jdbcType="INTEGER" />
+		<result column="PeopleOpenId" property="peopleOpenId" jdbcType="VARCHAR" />
+		<result column="Favourable" property="favourable" jdbcType="INTEGER" />
+		
+	</resultMap>
+	<select id="getFairMX" resultMap="BaseResultFairMX">
+		select
+		*
+		from ${formIp}
+	</select>
+	
+	
+	
+	
+	
+		<select id="getJionFairZD" resultMap="BaseResultFairZD">
+		select
+		*
+		from wx_fair_zd ORDER BY PeopleCount DESC
+	</select>
+	
+
+	<select id="getUserByWeiXinUser" resultMap="BaseResultMap">
+		select
+		*
+		from wx_user where OpenId=#{weiXinUser.openId}
+	</select>
+	
+<select id="getJionCountByOpenId" resultType="java.lang.String">
+		select
+		jionCount 
+		from wx_user where OpenId=#{openId}
+	</select>
+	
+<insert id="addUserInfo">
+insert into wx_user (NickName,Gender,Language,City,Province,Country,AvatarUrl,OpenId,JionCount) 
+values (#{userInfos.nickName},#{userInfos.gender},#{userInfos.language},#{userInfos.city},#{userInfos.province},#{userInfos.country},#{userInfos.avatarUrl},#{userInfos.openId},#{userInfos.jionCount})
+
+</insert>
+
+
+
+
+
+
+ <update id="createNewOpenIdTable" parameterType="String">  
+       CREATE TABLE  ${tableName} (
+  Fair varchar(255) default NULL,
+  Favourable int(11) default NULL,
+  Id int(11) NOT NULL auto_increment,
+  PRIMARY KEY  (Id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update> 
+
+
+<update id="creatFairsMX" parameterType="String">  
+       CREATE TABLE  ${formIp1} (
+  PeopleOpenId varchar(255) default NULL,
+  Favourable int(11) default NULL,
+  Id int(11) NOT NULL auto_increment,
+  PRIMARY KEY  (Id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update> 
+
+
+<select id="getFairMXByFairNameAndOpenId" resultMap="BaseResultFairMX">
+		select
+		*
+		from ${fair1} where PeopleOpenId=#{openId}
+	</select>
+
+<select id="getFariCountByFair" resultType="Integer">
+		select
+		PeopleCount 
+		from wx_fair_zd where FormIp=#{fair}
+</select>
+
+<select id="getMyCountByOpenId" resultType="Integer">
+		select
+		JionCount 
+		from wx_user where OpenId=#{openId}
+</select>
+
+
+
+<insert id="addMyIdIntoFair">
+insert into ${fair1} (PeopleOpenId,Favourable) 
+values (#{openId},0)
+
+</insert>
+<insert id="addFairIntoMyOpenId">
+insert into ${openId1} (Fair,Favourable) 
+values (#{fair},0)
+
+</insert>
+
+<insert id="addFairsZD">
+insert into wx_fair_zd
+ (FairName,FormIp,PeopleCount,FavourableCount) 
+values (#{fairName},#{formIp},0,0)
+
+</insert>
+
+ <update id="addFairZDCount">  
+      update wx_fair_zd set PeopleCount=#{count1} where FormIp=#{fair}
+      
+    </update> 
+
+<update id="addMyCount">  
+      update wx_user set JionCount=#{myCount1} where OpenId=#{openId}
+      
+    </update> 
+</mapper>

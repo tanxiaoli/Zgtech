@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+
+
+
+
+	<!-- 配置数据源DataSource -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+			<property name="driverClass" value="com.mysql.jdbc.Driver" />
+			<property name="jdbcUrl" value="jdbc:mysql:///zg_tech?characterEncoding=UTF-8" />
+			<property name="user" value="root" />
+			<property name="password" value="root" />
+	</bean>
+	
+	<!-- 配置SqlSessionFactory -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+			<!-- 根据包扫描实体类,配置别名 -->
+		 <property name="typeAliasesPackage" value="com.zgtech.dto" />
+
+			<property name="dataSource" ref="dataSource" /> 
+  </bean>
+ 
+	
+	<!-- 配置Mapper文件映射 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+			<!-- 扫描mapper.xml文件 -->
+			<property name="basePackage" value="com.zgtech.dao" />
+			<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+	</bean>
+	
+	<!-- 全局扫描 -->
+	<context:component-scan base-package="com.zgtech">
+		<!-- 扫描过程中排除@Controller注解 -->
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+</beans>

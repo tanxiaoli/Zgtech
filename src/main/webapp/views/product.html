@@ -1,0 +1,124 @@
+<#assign ctx=request.contextPath/>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/product.css" />
+	</head>
+	<body>
+<!--------------这里是头部--------------------------------------------------->
+		<#include "common/top.html"/>
+		
+<!----------------这里是中部------------------------------------------------------->		
+		
+		<div id="middle">	
+<!----------------这里是banner区-------------->
+		    <div id="banner">
+				<img src="img/images/images/pro_details-banner_02.jpg" alt="这是banner图" id="banner-jpg">
+				
+			</div>
+<!----------------这里是中部左侧导航栏-------------->
+			<div id="middle-down">
+				<div id="middle-left">
+					<div id="left-up">
+						<span>PRODUCTS</span>
+						<P>产品中心</P>
+					</div>
+					<ul>
+						<li id="menu-1">
+							<a href="#">舒适技术</a>
+						</li>
+						<li id="menu-2">
+							<a href="#">时尚技术</a>
+						</li>
+						<li>
+							<a href="#">实木技术</a>
+						</li>
+					</ul>
+				</div>
+			
+			
+<!----------------这里是中部右侧简介详情-------------->
+				<div id="middle-right">
+					<div id="right-up">
+						<p>
+							<a href="index.html">首页&gt;</a>
+							<span>
+								<a href="#">产品中心</a>
+							</span>
+						</p>
+						<span></span>
+					</div>
+				
+				
+					<div id="product-pic">
+						<ul id="pic-up">
+							<li>
+								<img src="img/images/index-product-01_03.jpg" />
+								<a href="#" class="details">舒适技术</a>
+							</li>
+							<li class="mid">
+								<img src="img/images/index-porduct-02_03.jpg"/>
+								<a href="#">舒适技术</a>
+							</li>
+							<li>
+								<img src="img/images/index-product-03_03.jpg" />
+								<a href="#">舒适技术</a>
+							</li>
+						</ul>
+						<ul id="pic-down">
+							<li>
+								<img src="img/images/index-porduct-04_03.jpg" />
+								<a href="#">舒适技术</a>
+							</li>
+							<li  class="mid">
+								<img src="img/images/index-product-05_03.jpg"/>
+								<a href="#">舒适技术</a>
+							</li>
+							<li>
+								<img src="img/images/index-product-06_03.jpg" />
+								<a href="#">舒适技术</a>
+							</li>
+						</ul>
+						
+					</div>
+				
+				
+				
+				
+					<div id="right-down">
+						
+						<div id="page">
+							<span class="page-1">
+								<a href="#">上一页</a>
+							</span>
+							<span id="page-2">
+								<a href="#">1</a>
+							</span>
+							<span>
+								<a href="#">2</a>
+							</span>
+							<span >
+								<a href="#">3</a>
+							</span>
+							<span >
+								<a href="#">...</a>
+							</span>
+							<span class="page-1">
+								<a href="#">下一页</a>
+							</span>
+							
+						</div>
+					</div>
+				</div>			
+
+			</div>
+		</div>
+<!------- footer 这里是底部-------------------------------------------------->	
+		<#include "common/footer.html"/>
+
+		
+	</body>
+</html>

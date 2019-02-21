@@ -1,0 +1,268 @@
+<#assign ctx=request.contextPath/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="${ctx}/views/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="${ctx}/views/css/index.css" />
+		<script type="text/javascript" src="${ctx}/views/js/jQuery.js"></script>
+		<script type="text/javascript" src="${ctx}/views/js/banner.js"></script>
+		
+		<script>
+			
+		   $(document).ready(function() {
+	            //表单异步提交
+	            $("#save-btn").on("click",function(){
+	           
+	            	$.ajax({ 
+	                    type: 'post', 
+	                    data: $('#addWords').serialize(), 
+	                    url: '${ctx}/customer/addWords',
+	                    cache:false,  
+	                    dataType:'text', 
+	                    success: function (data) {
+	                        if(data=="success"){
+	                        	alert("保存成功")
+	                        
+	                            window.location.href = "${ctx}/customer/home";
+	                        }else if(data=="fail1"){
+	                        	alert("验证码不正确")
+	                        }else if(data=="fail2"){
+	                        	alert("保存失败")
+	                        }else if(data=="fail3"){
+	                        	alert("请先登陆，在首页的顶部左上角")
+	                        }
+	                    }   
+	                })
+	            })
+	            
+	            
+	            
+	            			/** 为验证码看不清楚绑定点击事件 */
+		$("#authcode").click(function(){
+		$("#authcode").attr("src","${ctx}/authCode?"+Math.random());
+		
+	})
+	$("#kanbuq").click(function(){
+		$("#authcode").attr("src","${ctx}/authCode?"+Math.random());
+		
+	})
+
+		   })
+		</script>
+		
+		
+	</head>
+	<body>
+<!--------------这里是头部--------------------------------------------------->
+	
+		
+	<#include "common/top.html"/>
+		
+<!----------------这里是中部------------------------------------------------------->		
+		
+			
+<!----------------这里是banner区-------------->
+		    <div id="banner">
+		    	<img src="${ctx}/views/img/images/index-banner-01.jpg" alt="这是banner图" id="banner-0">
+		    	<img src="${ctx}/views/img/images/images/banner1.jpg" alt="这是banner图" id="banner-1" style="display:none">
+		    	<img src="${ctx}/views/img/images/images/banner2.jpg" alt="这是banner图" id="banner-2"  style="display:none">
+		    	
+		    
+				
+				<span id="arrow-left">
+					<img src="${ctx}/views/img/images/banner-left-arrow.png" />
+				</span>
+				<span id="arrow-right">
+					<img src="${ctx}/views/img/images/banner-right-arrow.png" />
+				</span>
+				<ul>
+					<li class="active"></li>
+					<li ></li>
+					<li ></li>
+				</ul>
+			</div>
+			
+			
+			
+<!-------ABOUT US 这里是关于我们------------->
+			<div id="about-us">
+				<img src="${ctx}/views/img/images/index-about-us_03.png" />
+				<div id="about-us-right">
+					<h1>ABOUT US</h1>
+					<p>关于我们</p>
+					<span></span>
+					<p id="down-p">赵刚技术工作室成立于2011年，位于中国技术之都—广东深圳，是一个集“技术开发、企业网络平台开发、销售推广和服务”于一体的高技术科技工作室，工作室拥有近40平米面积的开发基地，在华南地区拥有多家合作店。我工作室拥有先进技术人才；公司在职员工有包括：网页设计、前端开发，后台开发、微信公众号开发、网络营销推广等6名员工；经验丰富；品质保障；精干而富有经验的专业管理团队。工作室经过这几年的发展与壮大，已大为华南地区较有影响力的网络红黑科技工作室···
+					</p>
+					<a href="${ctx}/admin/login">+MORE</a>
+				</div>
+			</div>
+<!-------PRODUCT CENTER这里是产品中心------------->
+			<div id="product-center">
+				<h1>PRODUCT CENTER</h1>
+				<P>产品中心</P>
+				<span></span>
+				<div id="product"> 
+					<div id="product-pic">
+						<ul id="pic-up">
+							<li>
+								<img src="${ctx}/views/img/images/index-porduct-01.jpg" />
+								<p>网站建设</p>
+							</li>
+							<li class="mid">
+								<img src="${ctx}/views/img/images/index-porduct-02.jpg"/>
+								<p>微信公众号开发</p>
+							</li>
+							<li>
+								<img src="${ctx}/views/img/images/index-porduct-03.jpg" />
+								<p>微信小程序开发</p>
+							</li>
+						</ul>
+						<ul id="pic-down">
+							<li>
+								<img src="${ctx}/views/img/images/index-porduct-04.jpg" />
+								<p>微信支付</p>
+							</li>
+							<li  class="mid">
+								<img src="${ctx}/views/img/images/index-porduct-05.jpg"/>
+								<p>支付宝支付</p>
+							</li>
+							<li>
+								<img src="${ctx}/views/img/images/index-porduct-06.jpg" />
+								<p>微信运营托管</p>
+							</li>
+						</ul>
+						<a href="${ctx}/admin/login">+MORE</a>
+					</div>
+					
+				</div>
+				
+			</div>
+<!-------NEWS CENTER 这里是新闻中心------------->
+			<div id="news-center">
+				<h1>NEWS CENTER</h1>
+				<p>新闻中心</p>
+				<span></span>
+				<div id="news-down"> 
+					<ul id="news-menu">
+						<li id="news-1">
+							<a href="#">
+								工作室新闻
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								行业新闻
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								周边新闻
+							</a>
+						</li>
+					</ul>
+					<ul id="news-data">
+						<li>
+							<img src="${ctx}/views/img/images/index-news-03_07.jpg" />
+							<h3>赵刚技术工作室登福布斯最受尊重企业榜 独占中国红黑科技草莽鳌头</h3>
+							<p>近日，权威财经媒体《福布斯》杂志公布2017全球最受尊重黑科技榜(TOP REGARDED COMPANIES LIST)，登上全球榜第233位。
+							</p>
+							<a href="${ctx}/admin/login">+MORE</a>
+						</li>
+						
+					
+					</ul>
+				</div>
+				
+			</div>
+			
+			<div>
+			<hr>
+			<p style="font-size: 36px;;color:red">留言板：<p>
+			<hr>
+			
+			<#if notices??>
+				<#list notices as notice> 
+				
+				
+					<li> 
+					<span>${notice.user}</span>--<span>${notice.words}</span>
+					</li> 
+					<hr>
+				</#list>
+			</#if>
+			<br>
+			<div>
+				<form id="addWords">
+					<textarea name="words" style="width:500px;height:100px">有事请留言，欢迎留言！</textarea>
+						${tip!''}
+					<br>	
+					
+			验证码：<input type="text" id="code" name="code" style="width:120px;height:35px"/>
+			
+						<img src="${ctx}/authCode" id="authcode" alt="验证码" />
+						<a href="javascript: void(0)" id="kanbuq">切换</a>
+					<br>
+					 <input type="button" value="提交留言" id="save-btn" style="background-color:red; color:white;width:80px;height:30px"/>
+					
+						
+				</form>
+			
+			</div>
+			<hr>
+			</div>
+			
+			
+<!------- CONTACT US 这里联系我们------------->
+			<div id="contact-us">
+				<h1>CONTACT US</h1>
+				<p>联系我们</p>
+				<span></span>
+				<div id="contact-down">
+					<iframe src="${ctx}/views/map.html" id="map" scrolling="no">
+					</iframe>	
+					<div id="contact-data">
+						<h1>联系我们</h1>
+						<hr>
+						<p>联系人：赵刚</p>
+						<p>电&nbsp;话：0354-5288258</p>
+						<p>手&nbsp;机：13662345825</p>
+						<p>传&nbsp;真：0769-81633208</p>
+						<p>地&nbsp;址：广东省广州市天河区石牌村西河大街3巷11号</p>
+						<ul>
+							<li>
+								<img src="${ctx}/views/img/images/index-ico-weixin_03.jpg" alt="微信" />
+							</li>
+							<li>
+								<img src="${ctx}/views/img/images/index-ico-qq_03.jpg" alt="QQ"/>
+							</li>
+							<li>
+								<img src="${ctx}/views/img/images/index-ico-weibo_03.jpg" alt="微博" />
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<hr>
+			
+			
+<!------- footer 这里是底部-------------------------------------------------->	
+		
+			<#include "common/footer.html"/>
+			
+		<form id="addFairs" action="${ctx}/weixin/addMyFairs" method="get">
+					<textarea name="FairName" style="width:500px;height:100px">FairName</textarea>
+						
+					<br>	
+					<textarea name="FormIp" style="width:500px;height:100px">FormIp</textarea>
+						
+					<br>
+		验证码：<input type="text" id="code" name="code" style="width:120px;height:35px"/>
+			
+					 <input type="submit" value="提交" />	
+				</form>
+		
+	</body>
+</html>
